@@ -3,8 +3,8 @@
 /* test the correct status codes and returned data for each REST route */
 
 const server = require('../src/server');
-const supergoose = require('@code-fellows/supergoose');
-const request = supergoose(server.server);
+const super_goose = require('@code-fellows/supergoose');
+const request = super_goose(server.server);
 const mongoose = require('mongoose');
 require('dotenv').config();
 
