@@ -18,17 +18,14 @@ mongoose.connect(process.env.MONGOOSE_URL, {
 
 describe('test server', ()=>{
 
-
   afterAll(()=>{
     mongoose.connection.close();
   });
-
   
   it('should get status 404 on a bad route', async ()=>{
     const response = await request.get('/api/v1/badRoute');
     expect(response.status).toBe(404);
   });
-
 
   let arrayOfRoutes = ['food', 'clothes'];
 
@@ -42,5 +39,4 @@ describe('test server', ()=>{
       expect(response.status).toBe(404);
     });
   }
-
 });

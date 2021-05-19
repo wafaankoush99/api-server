@@ -27,7 +27,6 @@ describe('api server', () => {
     expect(res.body[Object.keys(food)[1]]).toEqual(Object.values(food)[1]);
     expect(res.body[Object.keys(food)[2]]).toEqual(Object.values(food)[2]);
     expect(res.body._id.length).toBeGreaterThan(0);
-
     id = res.body._id;
   });
 
@@ -35,7 +34,6 @@ describe('api server', () => {
     const res = await request.put(`/api/v1/food/${id}`).send(foodEditing);
     expect(res.status).toEqual(200);
     expect(res.body[Object.keys(foodEditing)[1]]).toEqual((Object.values(foodEditing)[1]));
-
   });
 
   it('should Read a list of records using GET', async () => {
