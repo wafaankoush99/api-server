@@ -4,23 +4,16 @@
 /* test bad routes and methods */
 
 const server = require('../src/server');
-const supertest = require('supertest');
-const request = supertest(server.server);
+const super_goose = require('@code-fellows/supergoose');
+const request = super_goose(server.server);
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGOOSE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}), async () => {
-  await mongoose.connection.db.dropDatabase();
-};
-
 describe('test server', ()=>{
 
-  afterAll(()=>{
-    mongoose.connection.close();
-  });
+  // afterAll(()=>{
+  //   mongoose.connection.close();
+  // });
   
   it('should get status 404 on a bad route', async ()=>{
     const response = await request.get('/api/v1/badRoute');
