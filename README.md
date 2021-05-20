@@ -150,4 +150,4 @@ server.js Checks the bad methods and bad routes
 
 ## UML
 
-![](./diagram.png)
+![](./Untitled Diagram.png)
