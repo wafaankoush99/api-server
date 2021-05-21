@@ -6,7 +6,7 @@
 ## End points : 
 
 - [Food](https://api-server-wafa.herokuapp.com/api/v1/food)
-- [Clothes](https://api-server-wafa.herokuapp.com/api/v1/food)
+- [Clothes](https://api-server-wafa.herokuapp.com/api/v1/clothes)
 
 
 Building a REST API using Express, by creating a proper series of endpoints that perform CRUD operations on a Mongo Database, using the REST standard
